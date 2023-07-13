@@ -1,36 +1,61 @@
+<!DOCTYPE html>
 <html>
 <head>
- 
   <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     
-    <title>Predict Human or Horse ML App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    
+    .banner {
+      margin-bottom: 20px;
+    
+    }
+    
+    .user-image {
+      max-width: 300px;
+      margin-bottom: 50px;
+    }
+    
+    .prediction {
+      margin-top: 20px;
+    }
+    
+    .prediction .badge {
+      font-size: 36px;
+    }
+  
+  </style>
+  <title>Predict Human or Horse ML App</title>
 </head>
 <body>
- 
-  <!-- Show  Banner-->
-  <div>
-    <img src="static/images/hhp.png" class="w3-border w3-padding" alt="Indian AI Production" style="width:100%">
+  <!-- Show Banner -->
+  <div class="banner">
+    <img src="static/images/hhp.png" class="w3-border w3-padding" alt="Indian AI Production" style="width: 100%">
   </div>
- 
  
   <div class="container">
-  <div class="row">
- 
-    <div class="col-sm">
-      <span class="border border-primary">
-        <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
-      </span>
+    <div class="row">
+      <div class="col-sm">
+        <span class="border border-primary">
+          <img src="{{ user_image }}" alt="User Image" class="img-thumbnail user-image">
+        </span>
+      </div>
+      <div class="col-sm prediction">
+        <h1>It's <span class="badge badge-secondary">{{pred_output}}</span></h1>
+      </div>
     </div>
- 
-    <div class="col-sm">
-      <h1>It's <span class="badge badge-secondary">{{pred_output}}</span></h1>
-    </div>
- 
   </div>
-</div>
- 
 </body>
 </html>
